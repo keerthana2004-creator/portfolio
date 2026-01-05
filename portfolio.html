@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keerthana P - Full-Stack Developer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+/* Typing Animation */
+.typed::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%,50%,100%{opacity:1;}
+  25%,75%{opacity:0;}
+}
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body class="bg-gray-900 text-white scroll-smooth">
+
+<!-- DARK/LIGHT TOGGLE -->
+<div id="theme-toggle" class="fixed top-5 right-5 cursor-pointer text-2xl z-50">🌙</div>
+
+<!-- NAVBAR -->
+<nav class="fixed w-full flex justify-between items-center p-5 bg-black bg-opacity-50 backdrop-blur-md z-40">
+  <div class="text-2xl font-bold">Keerthana P</div>
+  <ul class="flex space-x-6">
+    <li><a href="#hero" class="hover:text-blue-400">Home</a></li>
+    <li><a href="#about" class="hover:text-blue-400">About</a></li>
+    <li><a href="#skills" class="hover:text-blue-400">Skills</a></li>
+    <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+    <li><a href="#experience" class="hover:text-blue-400">Experience</a></li>
+    <li><a href="#testimonials" class="hover:text-blue-400">Testimonials</a></li>
+    <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="h-screen flex flex-col justify-center items-center text-center relative">
+  <h1 class="text-5xl font-bold mb-4">Hi, I'm <span class="text-blue-400">Keerthana P</span></h1>
+  <h2 class="text-2xl text-blue-500 typed mb-6" id="animated-text"></h2>
+  <div class="flex space-x-4">
+    <a href="#projects" class="px-6 py-3 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 hover:scale-105 transform transition">View Projects</a>
+    <a href="#contact" class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transform transition">Contact Me</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section px-5 py-24 reveal">
+  <h2 class="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">About Me</h2>
+  <p class="max-w-2xl mx-auto text-center mb-6">
+    Passionate Full-Stack Developer creating interactive and visually stunning web applications.
+    I combine technology with creativity to solve real-world problems.
+  </p>
+  <a href="resume.pdf" class="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transform transition">Download Resume</a>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section px-5 py-24 reveal">
+  <h2 class="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Skills</h2>
+  <div class="flex flex-wrap justify-center gap-12">
+    <!-- Frontend -->
+    <div class="w-64">
+      <h3 class="text-xl font-semibold mb-4">Frontend</h3>
+      <div class="space-y-3">
+        <div>HTML<div class="w-full bg-gray-700 h-2 rounded"><div class="bg-blue-400 h-2 rounded w-11/12 transition-all duration-1000"></div></div></div>
+        <div>CSS<div class="w-full bg-gray-700 h-2 rounded"><div class="bg-blue-400 h-2 rounded w-10/12 transition-all duration-1000"></div></div></div>
+        <div>JavaScript<div class="w-full bg-gray-700 h-2 rounded"><div class="bg-blue-400 h-2 rounded w-9/12 transition-all duration-1000"></div></div></div>
+      </div>
+    </div>
+    <!-- Backend -->
+    <div class="w-64">
+      <h3 class="text-xl font-semibold mb-4">Backend</h3>
+      <div class="space-y-3">
+        <div>Node.js<div class="w-full bg-gray-700 h-2 rounded"><div class="bg-purple-500 h-2 rounded w-8/12 transition-all duration-1000"></div></div></div>
+        <div>Express<div class="w-full bg-gray-700 h-2 rounded"><div class="bg-purple-500 h-2 rounded w-7/12 transition-all duration-1000"></div></div></div>
+      </div>
+    </div>
+    <!-- Tools -->
+    <div class="w-64">
+      <h3 class="text-xl font-semibold mb-4">Tools</h3>
+      <div class="space-y-3">
+        <div>Git & GitHub<div class="w-full bg-gray-700 h-2 rounded"><div class="bg-pink-500 h-2 rounded w-10/12 transition-all duration-1000"></div></div></div>
+        <div>Docker<div class="w-full bg-gray-700 h-2 rounded"><div class="bg-pink-500 h-2 rounded w-6/12 transition-all duration-1000"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section px-5 py-24 reveal">
+  <h2 class="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Projects</h2>
+  <div class="flex justify-center gap-4 mb-6">
+    <button data-filter="all" class="px-4 py-2 rounded-full bg-purple-500 hover:bg-blue-400 transition">All</button>
+    <button data-filter="frontend" class="px-4 py-2 rounded-full bg-purple-500 hover:bg-blue-400 transition">Frontend</button>
+    <button data-filter="backend" class="px-4 py-2 rounded-full bg-purple-500 hover:bg-blue-400 transition">Backend</button>
+  </div>
+  <div class="flex flex-wrap justify-center gap-6">
+    <div class="project-card p-6 rounded-2xl bg-gray-800 w-64" data-type="frontend">
+      <h3 class="font-semibold text-xl mb-2">Portfolio Website</h3>
+      <p class="text-gray-300 mb-2">Interactive portfolio showcasing UI animations.</p>
+      <p class="text-gray-400 mb-3">HTML, CSS, JS</p>
+      <div class="flex gap-2">
+        <a href="#" class="px-3 py-1 bg-blue-400 rounded-full text-sm">Live</a>
+        <a href="#" class="px-3 py-1 bg-purple-500 rounded-full text-sm">GitHub</a>
+      </div>
+    </div>
+    <div class="project-card p-6 rounded-2xl bg-gray-800 w-64" data-type="backend">
+      <h3 class="font-semibold text-xl mb-2">API Service</h3>
+      <p class="text-gray-300 mb-2">REST API handling auth & requests.</p>
+      <p class="text-gray-400 mb-3">Node.js, Express, MongoDB</p>
+      <div class="flex gap-2">
+        <a href="#" class="px-3 py-1 bg-blue-400 rounded-full text-sm">Live</a>
+        <a href="#" class="px-3 py-1 bg-purple-500 rounded-full text-sm">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section px-5 py-24 reveal">
+  <h2 class="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Experience & Education</h2>
+  <div class="flex flex-col items-center gap-10">
+    <div class="relative pl-10">
+      <span class="absolute left-0 top-0 w-1 h-full bg-blue-500"></span>
+      <span class="font-bold">2023</span>
+      <h3 class="font-semibold text-xl">Full-Stack Developer Intern</h3>
+      <p>Worked on dynamic web apps using Node.js and React.</p>
+    </div>
+    <div class="relative pl-10">
+      <span class="absolute left-0 top-0 w-1 h-full bg-blue-500"></span>
+      <span class="font-bold">2021</span>
+      <h3 class="font-semibold text-xl">B.Tech Computer Science</h3>
+      <p>Graduated with First Class Honors.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section px-5 py-24 reveal">
+  <h2 class="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Testimonials</h2>
+  <div class="max-w-xl mx-auto relative">
+    <div class="testimonial-card p-6 rounded-2xl bg-gray-800 text-center hidden">
+      <p>"Keerthana delivers clean, creative code with UI/UX focus."</p>
+      <span class="block mt-2 text-gray-400">- Senior Engineer</span>
+    </div>
+    <div class="testimonial-card p-6 rounded-2xl bg-gray-800 text-center">
+      <p>"A pleasure to work with, innovative & proactive."</p>
+      <span class="block mt-2 text-gray-400">- Team Lead</span>
+    </div>
+    <div class="flex justify-center mt-6 gap-4">
+      <button id="prev" class="px-3 py-1 bg-purple-500 rounded-full">‹</button>
+      <button id="next" class="px-3 py-1 bg-purple-500 rounded-full">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section px-5 py-24 reveal">
+  <h2 class="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Contact Me</h2>
+  <form id="contact-form" class="max-w-md mx-auto space-y-6">
+    <input type="text" id="name" placeholder="Name" class="w-full p-3 rounded-xl bg-gray-800 border-none" required>
+    <input type="email" id="email" placeholder="Email" class="w-full p-3 rounded-xl bg-gray-800 border-none" required>
+    <textarea id="message" rows="5" placeholder="Message" class="w-full p-3 rounded-xl bg-gray-800 border-none" required></textarea>
+    <button type="submit" class="w-full py-3 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 hover:scale-105 transform transition">Send Message</button>
+    <p id="form-message" class="text-center mt-2"></p>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center bg-gray-900 relative">
+  <p>© 2026 Keerthana P. All rights reserved.</p>
+  <button id="back-to-top" class="fixed bottom-5 right-5 bg-blue-500 rounded-full p-3">↑</button>
+</footer>
+
+<script>
+// DARK/LIGHT MODE
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('bg-white');
+  document.body.classList.toggle('text-gray-900');
+  localStorage.setItem('theme', document.body.classList.contains('bg-white') ? 'light' : 'dark');
+});
+if(localStorage.getItem('theme')==='light'){document.body.classList.add('bg-white','text-gray-900');}
+
+// TYPING ANIMATION
+const txtElement = document.getElementById('animated-text');
+const txt = "Creative Full-Stack Software Developer";
+let index = 0;
+function typeText(){txtElement.textContent=txt.slice(0,index++); if(index<=txt.length) setTimeout(typeText,100);}
+typeText();
+
+// SCROLL REVEAL
+const observer = new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting) entry.target.classList.add('active');});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// PROJECT FILTER
+const filterBtns = document.querySelectorAll('[data-filter]');
+const projectCards = document.querySelectorAll('.project-card');
+filterBtns.forEach(btn=>btn.addEventListener('click',()=>{
+  const filter = btn.dataset.filter;
+  projectCards.forEach(card=>{
+    card.style.display = filter==='all'||card.dataset.type===filter?'block':'none';
+  });
+}));
+
+// TESTIMONIAL SLIDER
+let currentTest=0;
+const testimonials=document.querySelectorAll('.testimonial-card');
+const nextBtn=document.getElementById('next');
+const prevBtn=document.getElementById('prev');
+function showTestimonial(index){testimonials.forEach(t=>t.classList.add('hidden')); testimonials[index].classList.remove('hidden');}
+nextBtn.addEventListener('click',()=>{currentTest=(currentTest+1)%testimonials.length; showTestimonial(currentTest);});
+prevBtn.addEventListener('click',()=>{currentTest=(currentTest-1+testimonials.length)%testimonials.length; showTestimonial(currentTest);});
+
+// CONTACT FORM
+const form=document.getElementById('contact-form');
+form.addEventListener('submit',e=>{e.preventDefault();
+  const name=form.name.value.trim();
+  const email=form.email.value.trim();
+  const message=form.message.value.trim();
+  const msgEl=document.getElementById('form-message');
+  if(!name||!email||!message){msgEl.textContent="Please fill all fields!"; msgEl.className="text-red-500";}
+  else{msgEl.textContent="Message sent successfully!"; msgEl.className="text-green-500"; form.reset();}
+});
+
+// BACK TO TOP
+document.getElementById('back-to-top').addEventListener('click',()=>{window.scrollTo({top:0, behavior:'smooth'});});
+</script>
+</body>
+</html>
